@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spotify Auth</title>
+</head>
+<body>
+  <h2>Spotify Auth Code</h2>
+  <p>Copy the code from the URL bar and paste it into your app.</p>
+  <script>
+    // Extract the code from the URL
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get("code");
+    if (code) {
+      document.body.innerHTML += `<p><b>Your code:</b> ${code}</p>`;
+    } else {
+      document.body.innerHTML += "<p>No code found!</p>";
+    }
+  </script>
+</body>
+</html>
